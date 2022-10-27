@@ -1,3 +1,6 @@
+import PropTypes from 'prop-types';
+
+
 export const Controls = ({options, onLeaveFeedback}) => {
     // console.log(options);
     return(
@@ -7,4 +10,9 @@ export const Controls = ({options, onLeaveFeedback}) => {
             })}
         </div>
     )
-} 
+};
+
+Controls.propTypes = {
+    options: PropTypes.array.isRequired,
+    onLeaveFeedback: PropTypes.func.isRequired
+}
